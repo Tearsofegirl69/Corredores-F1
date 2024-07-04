@@ -1,0 +1,61 @@
+/* Estilos personalizados para el formulario de agregar empleado */
+
+body {
+    background-color: #181818; /* Color de fondo gris oscuro para todo el cuerpo */
+    font-family: Arial, sans-serif; /* Fuente del texto */
+}
+
+.container {
+    margin-top: 50px; /* Espacio superior */
+}
+
+h2 {
+    text-align: center; /* Centrar el título */
+    margin-bottom: 30px; /* Espacio inferior */
+    color: #035cb6; /* Color azul para el título */
+}
+
+.card-body {
+    background-color: #2aa32a; /* Color de fondo verde para la tarjeta */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border: 1px solid #dee2e6; /* Borde gris claro */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Espacio inferior entre grupos de formulario */
+}
+
+.form-control {
+    border-color: #007bff; /* Color del borde azul */
+}
+
+label {
+    font-weight: bold; /* Texto del label en negrita */
+    color: #343a40; /* Color gris oscuro para el texto del label */
+}
+
+.error-message {
+    color: #dc3545; /* Color rojo para mensajes de error */
+    font-size: 0.875rem; /* Tamaño de fuente más pequeño */
+    margin-top: 5px; /* Espacio superior */
+}
+
+.btn-block {
+    width: 100%; /* Botón ocupa el ancho completo del contenedor */
+}
+
+.btn-success {
+    background-color: #007bff; /* Color de fondo azul */
+    border-color: #007bff; /* Color del borde azul */
+}
+
+.btn-success:hover {
+    background-color: #0056b3; /* Color de fondo azul oscuro al pasar el mouse */
+    border-color: #004085; /* Color del borde azul oscuro al pasar el mouse */
+}
+
+.btn-success:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); /* Sombra al enfocar el botón */
+}

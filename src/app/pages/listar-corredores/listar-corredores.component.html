@@ -1,0 +1,42 @@
+<div class="container">
+    <h2>Lista de corredores</h2>
+    
+
+    <p *ngIf="corredores.length <= 0" class="text-center">
+        No hay corredores en tabla de posiciones
+    </p>
+
+    <table *ngIf="corredores.length > 0" class="table table-bordered">
+        <thead class="table-success">
+            <tr>
+                
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Edad</th>
+                <th scope="col">Sexo</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let corredor of corredores; let i = index">
+                <td>{{ corredor.name }}</td>
+                <td>{{ corredor.apellido }}</td>
+                <td>{{ corredor.correo }}</td>
+                <td>{{ corredor.edad }}</td>
+                <td>{{ corredor.sexo }}</td>
+                <td>
+                    <span [routerLink]="['/editar-corredor', corredor._id]">
+                        <button type="button" class="btn btn-warning btn-sm">Editar</button>
+                    </span>
+                </td>
+                <td>
+                    <span (click)="eliminarCorredor(corredor, i)">
+                        <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

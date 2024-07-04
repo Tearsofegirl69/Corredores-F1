@@ -1,0 +1,61 @@
+/* Estilos personalizados para el formulario de agregar empleado */
+
+body {
+    background-color: #181818; /* Color de fondo gris oscuro para todo el cuerpo */
+    font-family: Arial, sans-serif; /* Fuente del texto */
+}
+
+.container {
+    margin-top: 50px; /* Espacio superior */
+}
+
+h2 {
+    text-align: center; /* Centrar el título */
+    margin-bottom: 30px; /* Espacio inferior */
+    color: #035cb6; /* Color azul para el título */
+}
+
+.table {
+    width: 100%; /* Ocupa el ancho completo */
+    margin-bottom: 1rem; /* Espacio inferior */
+    background-color: #ffffff; /* Color de fondo blanco */
+}
+
+.table-bordered {
+    border: 1px solid #dee2e6; /* Borde gris claro */
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #dee2e6; /* Borde gris claro para celdas */
+}
+
+.table-success {
+    background-color: #2aa32a; /* Color de fondo verde para el encabezado de la tabla */
+    color: #ffffff; /* Color de texto blanco */
+}
+
+.text-center {
+    text-align: center; /* Centrar el texto */
+    color: #ffffff; /* Color de texto blanco */
+}
+
+.btn-warning {
+    background-color: #ffc107; /* Color de fondo amarillo */
+    border-color: #ffc107; /* Color del borde amarillo */
+}
+
+.btn-warning:hover {
+    background-color: #e0a800; /* Color de fondo amarillo oscuro al pasar el mouse */
+    border-color: #d39e00; /* Color del borde amarillo oscuro al pasar el mouse */
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Color de fondo rojo */
+    border-color: #dc3545; /* Color del borde rojo */
+}
+
+.btn-danger:hover {
+    background-color: #c82333; /* Color de fondo rojo oscuro al pasar el mouse */
+    border-color: #bd2130; /* Color del borde rojo oscuro al pasar el mouse */
+}

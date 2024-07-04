@@ -1,0 +1,95 @@
+<div class="container">
+    <h2>Agregar corredor</h2>
+
+    <link href="agregar-corredor.component.css" rel="stylesheet">
+
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card-body">
+
+                <form [formGroup]="corredorForm" (ngSubmit)="onSubmit()">
+
+                    <div class="form-group">
+                        <label for="name">Nombre de corredor</label>
+                        <input type="text" class="form-control" formControlName="name">
+                        <!-- Mensaje de error de validación -->
+                         <div style="color: red;" *ngIf="enviado && myForm['name'].errors?.['required']">
+                            Campo obligatorio
+                         </div>
+                    </div>
+
+                    <br>
+
+                    <div class="form-group">
+                        <label for="Apellido">Apellido del corredor</label>
+                        <input type="text" class="form-control" formControlName="apellido">
+                        <!-- Mensaje de error de validación -->
+                         <div style="color: red;" *ngIf="enviado && myForm['apellido'].errors?.['required']">
+                            Campo obligatorio
+                         </div>
+                         <!-- Mensaje de error de validación 2 -->
+                         <div style="color: red;" *ngIf="enviado && myForm['apellido'].errors?.['pattern']">
+                            Campo obligatorio
+                         </div>
+                    </div>
+
+                    <br>
+
+                    <div class="form-group">
+                        <label for="correo">Correo de corredor</label>
+                        <input type="text" class="form-control" formControlName="correo">
+                        <!-- Mensaje de error de validación -->
+                         <div style="color: red;" *ngIf="enviado && myForm['correo'].errors?.['required']">
+                            Campo obligatorio
+                         </div>
+                         <!-- Mensaje de error de validación 2 -->
+                         <div style="color: red;" *ngIf="enviado && myForm['correo'].errors?.['pattern']">
+                            Campo obligatorio
+                         </div>
+                    </div>
+
+                    
+                    <br>
+
+                    <div class="form-group">
+                        <label for="edad">Edad del corredor</label>
+                        <input type="text" class="form-control" formControlName="edad">
+                        <!-- Mensaje de error de validación -->
+                         <div style="color: red;" *ngIf="enviado && myForm['edad'].errors?.['required']">
+                            Campo obligatorio
+                         </div>
+                         <!-- Mensaje de error de validación 2 -->
+                         <div style="color: red;" *ngIf="enviado && myForm['edad'].errors?.['pattern']">
+                            Campo obligatorio
+                         </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id">Sexo</label>
+                        <select class="custom-select form-control" 
+                        (change)="actualizarSexo($event.target.value)" 
+                        formControlName="sexo">
+                            <option value="">Selecciona sexo</option>
+                            <option *ngFor="let sexo of corredorSexo" value="{{sexo}}">
+                                {{sexo}}
+                            </option>
+                        </select>
+                        <!-- Mensaje de error de validación -->
+                        <div style="color: red;" *ngIf="enviado && myForm['sexo'].errors?.['required']">
+                            Seleccione un sexo
+                         </div>                        
+                    </div>
+
+                    <br>
+                    <div class="form-group">
+                        <button class="btn btn-success btn-lg btn-block" type="submit">
+                            Agregar nuevo corredor
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
